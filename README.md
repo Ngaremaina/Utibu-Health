@@ -39,7 +39,7 @@ This project is an online medication platform that provides users with the abili
      ```
 
 3. **Frontend Setup**:
-   - Navigate to the `client` directory.
+   - Navigate to the `frontend` directory.
    - Install dependencies:
      ```bash
      npm install
