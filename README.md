@@ -40,9 +40,14 @@ This project is an online medication platform that provides users with the abili
 
 3. **Frontend Setup**:
    - Navigate to the `frontend` directory.
-   - Install dependencies:
+   - Install dependencies using either npm or yarn:
+   - Using npm
      ```bash
      npm install
+     ```
+   - Using yarn
+     ```bash
+     yarn install
      ```
    - Update the API URL in the `config.js` file to the host IP Address.
    - Run the React Native application:
