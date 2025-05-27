@@ -38,7 +38,8 @@ jobs:
       run: yarn install --frozen-lockfile
       working-directory: frontend
 
-    - name: Build project
-      run: yarn build
+    - name: Build with EAS
+      run: npx eas build --platform android --non-interactive
       working-directory: frontend
+
 
