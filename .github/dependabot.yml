@@ -6,11 +6,11 @@
 version: 2
 updates:
   - package-ecosystem: "npm"     # frontend JavaScript dependencies
-    directory: "/frontend"       # adjust if your frontend folder is named differently
+    directory: "/frontend"       
     schedule:
       interval: "weekly"
   - package-ecosystem: "pip"     # backend Python dependencies
-    directory: "/backend"        # adjust if your backend folder is named differently
+    directory: "/backend"       
     schedule:
       interval: "weekly"
 
