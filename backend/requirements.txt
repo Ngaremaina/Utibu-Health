@@ -11,7 +11,7 @@ Flask-Cors==6.0.2
 Flask-JWT-Extended==4.7.1
 Flask-Migrate==4.1.0
 Flask-SQLAlchemy==3.1.1
-greenlet==3.3.0
+greenlet==3.3.1
 idna==3.11
 itsdangerous==2.2.0
 Jinja2==3.1.6
