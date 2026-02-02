@@ -1714,20 +1714,20 @@
     use-latest-callback "^0.2.4"
     use-sync-external-store "^1.5.0"
 
-"@react-navigation/drawer@^7.5.3":
-  version "7.5.3"
-  resolved "https://registry.yarnpkg.com/@react-navigation/drawer/-/drawer-7.5.3.tgz#90178bc57956695f50bb59478e9af14fccebbaff"
-  integrity sha512-Jpfft6iHWL7G73nsc1n43g/ZpV/aRvj002AlX3xXyyMN+pB7USxt8J54srYomLO0EsTIhDDfazNL15o28+GQ6w==
+"@react-navigation/drawer@^7.8.0":
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/@react-navigation/drawer/-/drawer-7.8.0.tgz#1950f2564f8627b2bad3b5e0adb449f93ae4b0ae"
+  integrity sha512-1pIVYS1OScjroWYBx5/xdfvR9VGWGXphh4Uk7PsLcrxUjywalYixkXAKdVMRa3u5O0WYewX2wpzqr6oAKhxd9Q==
   dependencies:
-    "@react-navigation/elements" "^2.5.2"
+    "@react-navigation/elements" "^2.9.5"
     color "^4.2.3"
-    react-native-drawer-layout "^4.1.12"
+    react-native-drawer-layout "^4.2.1"
     use-latest-callback "^0.2.4"
 
-"@react-navigation/elements@^2.5.2":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@react-navigation/elements/-/elements-2.5.2.tgz#e74aed3671f280773b0066c308f679a0e9e679ab"
-  integrity sha512-aGC3ukF5+lXuiF5bK7bJyRuWCE+Tk4MZ3GoQpAb7u7+m0KmsquliDhj4UCWEUU5kUoCeoRAUvv+1lKcYKf+WTQ==
+"@react-navigation/elements@^2.5.2", "@react-navigation/elements@^2.9.5":
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/@react-navigation/elements/-/elements-2.9.5.tgz#29f68c4975351724dcfe1d3bdc76c4d6dc65fc33"
+  integrity sha512-iHZU8rRN1014Upz73AqNVXDvSMZDh5/ktQ1CMe21rdgnOY79RWtHHBp9qOS3VtqlUVYGkuX5GEw5mDt4tKdl0g==
   dependencies:
     color "^4.2.3"
     use-latest-callback "^0.2.4"
@@ -5101,11 +5101,12 @@ react-is@^19.1.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-19.1.0.tgz#805bce321546b7e14c084989c77022351bbdd11b"
   integrity sha512-Oe56aUPnkHyyDxxkvqtd7KkdQP5uIUfHxd5XTb3wE9d/kRnZLmKbDB0GWk919tdQ+mxxPtG6EAs6RMT6i1qtHg==
 
-react-native-drawer-layout@^4.1.12:
-  version "4.1.12"
-  resolved "https://registry.yarnpkg.com/react-native-drawer-layout/-/react-native-drawer-layout-4.1.12.tgz#0cdfe2d2ca9288cb099f1e1808c8addf2fad25de"
-  integrity sha512-oKolvp5seiUieG+RHGjpFe8rH8Ds24iW0QBl31TlCVOX7tdn42IQIBl5tuD1i7h3q+VqqnbcT+NB2dcJ5suZkw==
+react-native-drawer-layout@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-drawer-layout/-/react-native-drawer-layout-4.2.1.tgz#5c89425662c9b5216a227dbc87bc7f38c4ec8719"
+  integrity sha512-liwRJ7ynRU/ogRlUdiK1Yoi1VzUSq2Vu/RU+UgqlMB3XduslZ1DZg/mTX0f1uCEV2dJ4ec+1fRa3OlIierfyZg==
   dependencies:
+    color "^4.2.3"
     use-latest-callback "^0.2.4"
 
 react-native-elements@^3.4.3:
