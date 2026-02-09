@@ -25,7 +25,7 @@
     "react-native-paper": "^5.15.0",
     "react-native-radio-buttons-group": "^3.1.0",
     "react-native-reanimated": "^3.19.5",
-    "react-native-screens": "^4.21.0",
+    "react-native-screens": "^4.23.0",
     "react-native-svg": "^15.15.1"
   },
   "devDependencies": {
