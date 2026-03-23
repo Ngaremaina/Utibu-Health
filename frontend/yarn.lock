@@ -1727,7 +1727,7 @@
     react-native-drawer-layout "^4.2.2"
     use-latest-callback "^0.2.4"
 
-"@react-navigation/elements@^2.9.10", "@react-navigation/elements@^2.9.5":
+"@react-navigation/elements@^2.9.10":
   version "2.9.10"
   resolved "https://registry.yarnpkg.com/@react-navigation/elements/-/elements-2.9.10.tgz#8cde92a7b4d088a46efb931e6edb2644eddd630c"
   integrity sha512-N8tuBekzTRb0pkMHFJGvmC6Q5OisSbt6gzvw7RHMnp4NDo5auVllT12sWFaTXf8mTduaLKNSrD/NZNaOqThCBg==
@@ -5008,10 +5008,10 @@ react-native-size-matters@^0.3.1:
   resolved "https://registry.yarnpkg.com/react-native-size-matters/-/react-native-size-matters-0.3.1.tgz#24d0cfc335a2c730f6d58bd7b43ea5a41be4b49f"
   integrity sha512-mKOfBLIBFBcs9br1rlZDvxD5+mAl8Gfr5CounwJtxI6Z82rGrMO+Kgl9EIg3RMVf3G855a85YVqHJL2f5EDRlw==
 
-react-native-svg@^15.15.3:
-  version "15.15.3"
-  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-15.15.3.tgz#48baf15ad9610be816b37c03ffbb1f72c056a2b0"
-  integrity sha512-/k4KYwPBLGcx2f5d4FjE+vCScK7QOX14cl2lIASJ28u4slHHtIhL0SZKU7u9qmRBHxTCKPoPBtN6haT1NENJNA==
+react-native-svg@^15.15.4:
+  version "15.15.4"
+  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-15.15.4.tgz#c029be85c20ead09c63dffa6b1ade06012f095ed"
+  integrity sha512-boT/vIRgj6zZKBpfTPJJiYWMbZE9duBMOwPK6kCSTgxsS947IFMOq9OgIFkpWZTB7t229H24pDRkh3W9ZK/J1A==
   dependencies:
     css-select "^5.1.0"
     css-tree "^1.1.3"
