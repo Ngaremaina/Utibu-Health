@@ -1928,6 +1928,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-test-renderer@^19.1.0":
+  version "19.1.0"
+  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-19.1.0.tgz#1d0af8f2e1b5931e245b8b5b234d1502b854dc10"
+  integrity sha512-XD0WZrHqjNrxA/MaR9O22w/RNidWR9YZmBdRGI7wcnWGrv/3dA8wKCJ8m63Sn+tLJhcjmuhOi629N66W6kgWzQ==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*":
   version "19.1.6"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-19.1.6.tgz#dee39f3e1e9a7d693f156a5840570b6d57f325ea"
@@ -4937,12 +4944,13 @@ react-native-elements@^3.4.3:
     react-native-ratings "8.0.4"
     react-native-size-matters "^0.3.1"
 
-react-native-gesture-handler@^2.30.1:
-  version "2.30.1"
-  resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.30.1.tgz#d930b8b8870cd2f5cc0c967acf94c8891ada42de"
-  integrity sha512-xIUBDo5ktmJs++0fZlavQNvDEE4PsihWhSeJsJtoz4Q6p0MiTM9TgrTgfEgzRR36qGPytFoeq+ShLrVwGdpUdA==
+react-native-gesture-handler@^2.31.0:
+  version "2.31.0"
+  resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.31.0.tgz#7963b37b5566134bb6006024ec6a20d215a5b1a0"
+  integrity sha512-wmMs24UaRCIvIU/Nm7cSIV0FEWFsMrNBXxtpo5+9i8iCeOFFuyi8v8Dgfo7JKspcqPMUin0DBzi9DiG3vsDq5A==
   dependencies:
     "@egjs/hammerjs" "^2.0.17"
+    "@types/react-test-renderer" "^19.1.0"
     hoist-non-react-statics "^3.3.0"
     invariant "^2.2.4"
 
