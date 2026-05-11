@@ -2705,10 +2705,10 @@ expo-server@^55.0.9:
   resolved "https://registry.yarnpkg.com/expo-server/-/expo-server-55.0.9.tgz#ae2b6d8b1f242d4f842d7bc304234a941578f97d"
   integrity sha512-N5Ipn1NwqaJzEm+G97o0Jbe4g/th3R/16N1DabnYryXKCiZwDkK13/w3VfGkQN9LOOaBP+JIRxGf4M8lQKPzyA==
 
-expo-status-bar@~55.0.5:
-  version "55.0.5"
-  resolved "https://registry.yarnpkg.com/expo-status-bar/-/expo-status-bar-55.0.5.tgz#85c244bee0325db84fbd02d66c752f8cd3e61d3f"
-  integrity sha512-qb0c3rJO2b7CC0gUVGi1JYp92oLenWdYGyk8l4YQs6U+uaXUTPv6aaFa3KkT2HON10re3AxxPNJci8rsz6kPxg==
+expo-status-bar@~55.0.6:
+  version "55.0.6"
+  resolved "https://registry.yarnpkg.com/expo-status-bar/-/expo-status-bar-55.0.6.tgz#ae54f85e9aff081480f87e902c29ffc26343aa3f"
+  integrity sha512-ijOUptfdiqYt7rObZ6jrPQ8sE5YN/8MxKCIJx0b7TY4nGkSJxhPIxeoW4GXcXCA8mTQ9PiOHH/ThLZgRVZvUlQ==
   dependencies:
     react-native-is-edge-to-edge "^1.2.1"
 
