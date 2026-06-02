@@ -4401,10 +4401,10 @@ react-native-is-edge-to-edge@1.1.7:
   resolved "https://registry.yarnpkg.com/react-native-is-edge-to-edge/-/react-native-is-edge-to-edge-1.1.7.tgz#28947688f9fafd584e73a4f935ea9603bd9b1939"
   integrity sha512-EH6i7E8epJGIcu7KpfXYXiV2JFIYITtq+rVS8uEb+92naMRBdxhTuS8Wn2Q7j9sqyO0B+Xbaaf9VdipIAmGW4w==
 
-react-native-paper@^5.15.2:
-  version "5.15.2"
-  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-5.15.2.tgz#d13a81efa83144a65348bf6e63c5e9a4cf0df68d"
-  integrity sha512-e0HoKG+G85e5ckM28qElaqiDD+y0uHLVCUmOWe5094OuB9NDX4kKTY3twCVb2PPgA6lB0pQylu/O4Bvyg/gIYA==
+react-native-paper@^5.15.3:
+  version "5.15.3"
+  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-5.15.3.tgz#7eda85b920b60c2157b42d9dd4d7d291229fb277"
+  integrity sha512-GEyNTmWElIZgnYw09AjjCNupRYzCmP79uAAyGSyCEUZz7KBz1wtJcC0wVUkozR1Rn3PK/td/9LlR6+F1hzmYvA==
   dependencies:
     "@callstack/react-theme-provider" "^3.0.9"
     color "^3.1.2"
