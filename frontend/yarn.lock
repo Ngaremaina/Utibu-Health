@@ -1354,10 +1354,10 @@
     node-gyp "^12.1.0"
     proc-log "^6.0.0"
 
-"@react-native-async-storage/async-storage@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@react-native-async-storage/async-storage/-/async-storage-3.1.0.tgz#0e11a3e35d9dc3d5e91e7a505d19f6082ace1e48"
-  integrity sha512-ENwbn3kj/dOapdR3GVgfX5x9f9/rxHnsqol1bUkt26lrv0aAq6UoXnTlv7y2dT7RH0AShh9B1+KAPDVjJXnk0w==
+"@react-native-async-storage/async-storage@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@react-native-async-storage/async-storage/-/async-storage-3.1.1.tgz#051caeb93919260041e53165f1b6c8a975b15105"
+  integrity sha512-z+PnLz1n6ECKhgoHZHkfc+dijXZEyZnNFSajbtE0NEbsJhmX8x9GlOeiMQIKX2E4DUqPSgfIh4FYBv1M49KgPQ==
   dependencies:
     idb "8.0.3"
 
@@ -1479,7 +1479,7 @@
     react-native-drawer-layout "^4.2.4"
     use-latest-callback "^0.2.4"
 
-"@react-navigation/elements@^2.9.18", "@react-navigation/elements@^2.9.19":
+"@react-navigation/elements@^2.9.19":
   version "2.9.19"
   resolved "https://registry.yarnpkg.com/@react-navigation/elements/-/elements-2.9.19.tgz#8b9756ce0daab39095c90cd11d85ab41f78ba4f9"
   integrity sha512-gBUvCZuUkOGw1KpLQEZIkByUz8RYPwXeoA6mZFJy9K1mxd8GdqHDMFCIoB0lfPz9rgrHj99RvtdlGZ/ZzkZv2A==
