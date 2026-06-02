@@ -648,13 +648,6 @@
     deepmerge "^3.2.0"
     hoist-non-react-statics "^3.3.0"
 
-"@egjs/hammerjs@^2.0.17":
-  version "2.0.17"
-  resolved "https://registry.yarnpkg.com/@egjs/hammerjs/-/hammerjs-2.0.17.tgz#5dc02af75a6a06e4c2db0202cae38c9263895124"
-  integrity sha512-XQsZgjm2EcVUiZQf11UBJQfmZeEmOW8DpI1gsFeln6w0ae0ii4dMQEQ0kjl6DspdWX1aGY1/loyXnP0JS06e/A==
-  dependencies:
-    "@types/hammerjs" "^2.0.36"
-
 "@expo/cli@^56.1.13":
   version "56.1.13"
   resolved "https://registry.yarnpkg.com/@expo/cli/-/cli-56.1.13.tgz#887f549c6e1624cce64473d6151cf025e3572866"
@@ -1579,11 +1572,6 @@
   dependencies:
     "@tufjs/canonical-json" "2.0.0"
     minimatch "^10.1.1"
-
-"@types/hammerjs@^2.0.36":
-  version "2.0.46"
-  resolved "https://registry.yarnpkg.com/@types/hammerjs/-/hammerjs-2.0.46.tgz#381daaca1360ff8a7c8dff63f32e69745b9fb1e1"
-  integrity sha512-ynRvcq6wvqexJ9brDMS4BnBLzmr0e14d6ZJTEShTBWKymQiHwlAyGu0ZPEFI2Fh1U53F7tN9ufClWM5KvqkKOw==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.6"
@@ -4386,14 +4374,12 @@ react-native-elements@^3.4.3:
     react-native-ratings "8.0.4"
     react-native-size-matters "^0.3.1"
 
-react-native-gesture-handler@^2.31.2:
-  version "2.31.2"
-  resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.31.2.tgz#f1832592619db00d70b036f73cf48f54cb415d71"
-  integrity sha512-rw5q74i2AfS7YGYdbxQDhOU7xqgY6WRM1132/CCm3erqjblhECZDZFHIm0tteHoC9ih24wogVBVVzcTBQtZ+5A==
+react-native-gesture-handler@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-3.0.0.tgz#dcf086e6b1fd12a6701bfe7bdebac0b147d8d9e5"
+  integrity sha512-6E8o9D2sHwhFGiU0c4aCweMdJwIbQeBV+dq3IQ3HcqKhVGzg7ccEycap6i0zGCtIYfs3V29Xd4OycwcRj5qxBQ==
   dependencies:
-    "@egjs/hammerjs" "^2.0.17"
     "@types/react-test-renderer" "^19.1.0"
-    hoist-non-react-statics "^3.3.0"
     invariant "^2.2.4"
 
 react-native-is-edge-to-edge@1.1.7:
