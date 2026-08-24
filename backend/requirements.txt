@@ -21,7 +21,7 @@ marshmallow==4.3.0
 packaging==26.3
 PyJWT==2.13.0
 PyMySQL==1.2.0
-python-dotenv==1.2.2
+python-dotenv==1.2.3
 requests==2.34.2
 SQLAlchemy==2.0.52
 typing_extensions>=4.16.0
