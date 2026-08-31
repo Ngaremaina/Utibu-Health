@@ -1506,10 +1506,10 @@
     sf-symbols-typescript "^2.1.0"
     warn-once "^0.1.1"
 
-"@react-navigation/native@^7.3.17":
-  version "7.3.17"
-  resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-7.3.17.tgz#cd5a002ecbdc215521351f2e6b0c96b3b6d5a0a1"
-  integrity sha512-DQVraYcaWIiYrmqsmOunPSGQjjjxfKD6quZ+P4ycujW870CFCAdRQ9cmgE+v8O0YjuOUCnIDoOrqK53rl5zDDw==
+"@react-navigation/native@^7.3.18":
+  version "7.3.18"
+  resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-7.3.18.tgz#ae9bbad2f95140c0387f9700bbd0f335f8797446"
+  integrity sha512-5lLYl0Kt85jcpEYxXzj2ecIKta+yo4EcAIOZoJe6jU9lbR0lu6sAQsotU3rlVAYL1VBY/xLemxs4WQ2LJs4Oew==
   dependencies:
     "@react-navigation/core" "^7.21.13"
     escape-string-regexp "^4.0.0"
