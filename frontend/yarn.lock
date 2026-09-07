@@ -1477,20 +1477,20 @@
     use-latest-callback "^0.2.4"
     use-sync-external-store "^1.5.0"
 
-"@react-navigation/drawer@^7.13.5":
-  version "7.13.5"
-  resolved "https://registry.yarnpkg.com/@react-navigation/drawer/-/drawer-7.13.5.tgz#54c5fc4065fd12cf9687b0407f4d8145dc2c9e92"
-  integrity sha512-e1WdwyXeCS/tUDFSTIlNLgOWyUdz4hZnxQrAF7Ia1jY8F6gLNgo+Q04kxbUvTqS4wXZYfG2DSW94WnJogR3oSQ==
+"@react-navigation/drawer@^7.13.10":
+  version "7.13.10"
+  resolved "https://registry.yarnpkg.com/@react-navigation/drawer/-/drawer-7.13.10.tgz#aa2a77f65cef93984e3493801b1b8d5fbdd7c6ff"
+  integrity sha512-WgYMLzozq5X0ncVFUb9x4OXDpOJP0Duhq6LZtqr3iQZVVchGwmy68NiOTDgug1OsU9QwJul0kXX/xAiyqDVDCw==
   dependencies:
-    "@react-navigation/elements" "^2.9.36"
+    "@react-navigation/elements" "^2.9.40"
     color "^4.2.3"
-    react-native-drawer-layout "^4.2.9"
+    react-native-drawer-layout "^4.2.10"
     use-latest-callback "^0.2.4"
 
-"@react-navigation/elements@^2.9.36":
-  version "2.9.36"
-  resolved "https://registry.yarnpkg.com/@react-navigation/elements/-/elements-2.9.36.tgz#b060502ed97768f719b604dc9b652031babded1a"
-  integrity sha512-+10x9s5v2Q7FwAYdSmPMgILtxZyC5e4hWJQu8g5o3u4p8DUToTBmGvys/UvmEr+h9xmm0Go42qw9Ff2ape53kQ==
+"@react-navigation/elements@^2.9.36", "@react-navigation/elements@^2.9.40":
+  version "2.9.40"
+  resolved "https://registry.yarnpkg.com/@react-navigation/elements/-/elements-2.9.40.tgz#9c04bf0da29c9ff66ad96600365986ed256ac746"
+  integrity sha512-x2fCMVKU23YeQvHSCFq2mVRYAbHqYNqb8kfWSEfIQ+XUX7dBXWd93/pr0w5jLjALDHDxQUaJKh4mIqr8q3zAwQ==
   dependencies:
     color "^4.2.3"
     use-latest-callback "^0.2.4"
@@ -4533,10 +4533,10 @@ react-is@^19.1.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-19.1.0.tgz#805bce321546b7e14c084989c77022351bbdd11b"
   integrity sha512-Oe56aUPnkHyyDxxkvqtd7KkdQP5uIUfHxd5XTb3wE9d/kRnZLmKbDB0GWk919tdQ+mxxPtG6EAs6RMT6i1qtHg==
 
-react-native-drawer-layout@^4.2.9:
-  version "4.2.9"
-  resolved "https://registry.yarnpkg.com/react-native-drawer-layout/-/react-native-drawer-layout-4.2.9.tgz#848d36cdd5f4d92c95257ae8121ad998a567398b"
-  integrity sha512-ETOxvlhhb4LmuuG3RN7A3qwt9jr9AZ2it+1G2kNE4g2fTyxxay7QQkPm1HfKi/JzmMSWC5+YTepGSgZNpJIDGg==
+react-native-drawer-layout@^4.2.10:
+  version "4.2.10"
+  resolved "https://registry.yarnpkg.com/react-native-drawer-layout/-/react-native-drawer-layout-4.2.10.tgz#80eb37b6cce4bca95a2b58ca7efc7003ea2a3cdb"
+  integrity sha512-O6TQdZ5LSm3dqnuR4rX9KPtE+9dVg7jsezEYz1l01rkQTe4fQvYZIoPu2sZFl5X2N70uhRdjnPULySVR3sBUwA==
   dependencies:
     color "^4.2.3"
     use-latest-callback "^0.2.4"
