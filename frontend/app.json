@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "frontend",
-    "slug": "frontend",
+    "name": "Utibu Health",
+    "slug": "utibu-health",
+    "scheme": "utibuhealth",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,13 +12,13 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.utibuhealth.app"
     },
     "android": {
+      "package": "com.utibuhealth.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -25,6 +26,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": ["expo-secure-store"]
   }
 }

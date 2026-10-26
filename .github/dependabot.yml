@@ -1,16 +1,48 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
+# Dependabot version updates.
 # https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
 version: 2
 updates:
-  - package-ecosystem: "npm"     # frontend JavaScript dependencies
-    directory: "/frontend"       
+  - package-ecosystem: "npm" # frontend (Expo / TypeScript)
+    directory: "/frontend"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "pip"     # backend Python dependencies
-    directory: "/backend"       
+    groups:
+      # Expo SDK packages must move together; upgrade the SDK itself with
+      # `npx expo install expo@^<next> --fix` rather than via Dependabot.
+      expo-sdk:
+        patterns:
+          - "expo"
+          - "expo-*"
+          - "jest-expo"
+          - "eslint-config-expo"
+          - "react"
+          - "react-dom"
+          - "react-test-renderer"
+          - "@types/react"
+          - "react-native"
+          - "react-native-*"
+          - "@react-native-async-storage/*"
+          - "@expo/*"
+      dev-tooling:
+        dependency-type: "development"
+        exclude-patterns:
+          - "jest-expo"
+          - "eslint-config-expo"
+          - "react-test-renderer"
+          - "@types/react"
+    ignore:
+      - dependency-name: "expo"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react-native"
+        update-types: ["version-update:semver-minor", "version-update:semver-major"]
+
+  - package-ecosystem: "pip" # backend (Flask)
+    directory: "/backend"
     schedule:
       interval: "weekly"
 
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
