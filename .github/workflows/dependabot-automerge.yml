@@ -3,26 +3,23 @@ name: Dependabot Auto-Merge
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-  pull_request_review:
-    types: [submitted]
-  check_suite:
-    types: [completed]
 
 jobs:
   automerge:
     runs-on: ubuntu-latest
-
-    if: |
-      github.actor == 'dependabot[bot]' &&
-      github.event.pull_request != null
+    if: github.actor == 'dependabot[bot]'
 
     permissions:
       contents: write
       pull-requests: write
 
     steps:
-      - name: Enable auto-merge for Dependabot PR
+      # Enables GitHub's native auto-merge, so the PR only merges once the
+      # required Backend CI / Frontend CI checks pass. Major bumps need review.
+      - name: Enable auto-merge for minor and patch updates
         uses: fastify/github-action-merge-dependabot@v3
         with:
           github-token: ${{ secrets.MERGE_BOT_TOKEN }}
           merge-method: squash
+          target: minor
+          use-github-auto-merge: true
