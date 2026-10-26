@@ -1,0 +1,22 @@
+# Frontend
+frontend/node_modules
+frontend/dist
+frontend/coverage
+frontend/.expo
+frontend/.env*
+!frontend/.env.example
+
+# Backend
+backend/.env
+backend/.env.*
+backend/.venv
+backend/venv
+backend/tests
+backend/.pytest_cache
+backend/.ruff_cache
+backend/.coverage
+backend/htmlcov
+backend/Dockerfile
+**/__pycache__
+**/*.pyc
+*.db
