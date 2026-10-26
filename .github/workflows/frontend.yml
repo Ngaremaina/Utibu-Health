@@ -29,7 +29,7 @@ jobs:
     name: Typecheck, lint, format
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-node@v5
         with:
@@ -61,7 +61,7 @@ jobs:
         # Expo SDK 58 / React Native 0.88 require Node ^22.13 or ^24.3.
         node-version: [22.x, 24.x]
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-node@v5
         with:
@@ -88,7 +88,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [checks]
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-node@v5
         with:
