@@ -65,7 +65,9 @@ class Config:
     SQLALCHEMY_ENGINE_OPTIONS = engine_options(SQLALCHEMY_DATABASE_URI)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    CORS_ORIGINS = _list("CORS_ORIGINS", "*")
+    # Hosted web frontends are always allowed, on top of anything in CORS_ORIGINS.
+    WEB_ORIGINS = ("https://utibu-health.expo.app", "https://utibu-health.vercel.app")
+    CORS_ORIGINS = [*WEB_ORIGINS, *_list("CORS_ORIGINS", "*")]
     TRUST_PROXY = _bool("TRUST_PROXY", True)
 
     RATELIMIT_STORAGE_URI = os.getenv("RATELIMIT_STORAGE_URI", "memory://")
