@@ -20,6 +20,7 @@ beforeEach(() => {
     signIn,
     signUp,
     signOut: jest.fn(),
+    updateUser: jest.fn(),
   });
 });
 

@@ -20,6 +20,8 @@ it('maps endpoints to the REST API', async () => {
 
   await api.auth.login('a@b.co', 'pw');
   await api.auth.register('a', 'a@b.co', 'pw');
+  await api.auth.updateAccount({ username: 'b' });
+  await api.auth.changePassword('old', 'new');
   await api.products.list({ q: 'para' });
   await api.products.get(1);
   await api.cart.get();
@@ -46,6 +48,8 @@ it('maps endpoints to the REST API', async () => {
   expect(calls().map((call) => call[0])).toEqual([
     '/auth/login',
     '/auth/register',
+    '/auth/me',
+    '/auth/change-password',
     '/products',
     '/products/1',
     '/cart',
@@ -64,6 +68,7 @@ it('maps endpoints to the REST API', async () => {
     '/profile',
     '/profile',
   ]);
-  expect(calls()[5]?.[1]).toEqual({ product_id: 2, quantity: 3 });
-  expect(calls()[2]?.[1]).toEqual({ params: { q: 'para' } });
+  expect(calls()[3]?.[1]).toEqual({ current_password: 'old', new_password: 'new' });
+  expect(calls()[7]?.[1]).toEqual({ product_id: 2, quantity: 3 });
+  expect(calls()[4]?.[1]).toEqual({ params: { q: 'para' } });
 });
