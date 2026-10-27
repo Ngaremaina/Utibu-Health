@@ -2,7 +2,9 @@ import {
   hasErrors,
   isEmail,
   isKenyanPhone,
+  validateAccount,
   validateLogin,
+  validatePasswordChange,
   validateRegistration,
 } from '../validation';
 
@@ -41,5 +43,28 @@ describe('form validation', () => {
     const errors = validateRegistration('a', 'bad', 'short');
     expect(Object.keys(errors).sort()).toEqual(['email', 'password', 'username']);
     expect(hasErrors(validateRegistration('jane', 'jane@example.com', 'password123'))).toBe(false);
+  });
+});
+
+describe('validateAccount', () => {
+  it('requires a username and a valid email', () => {
+    expect(Object.keys(validateAccount(' a ', 'bad')).sort()).toEqual(['email', 'username']);
+    expect(hasErrors(validateAccount('jane', 'jane@example.com'))).toBe(false);
+  });
+});
+
+describe('validatePasswordChange', () => {
+  it('checks length, reuse and confirmation', () => {
+    expect(validatePasswordChange('', 'short', 'other')).toEqual({
+      current: 'Current password is required.',
+      next: 'Password must be at least 8 characters.',
+      confirm: 'Passwords do not match.',
+    });
+    expect(validatePasswordChange('password123', 'password123', 'password123').next).toBe(
+      'Choose a different password.',
+    );
+    expect(hasErrors(validatePasswordChange('password123', 'new-pass-456', 'new-pass-456'))).toBe(
+      false,
+    );
   });
 });

@@ -30,7 +30,7 @@ function MainDrawer() {
       <Drawer.Screen name="Products" component={ProductsScreen} />
       <Drawer.Screen name="Cart" component={CartScreen} />
       <Drawer.Screen name="Orders" component={OrdersScreen} />
-      <Drawer.Screen name="Profile" component={ProfileScreen} />
+      <Drawer.Screen name="Profile" component={ProfileScreen} options={{ title: 'My account' }} />
     </Drawer.Navigator>
   );
 }
