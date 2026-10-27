@@ -7,7 +7,7 @@ from app.auth import parse_body
 from app.errors import APIError, Conflict
 from app.extensions import db, limiter
 from app.models import User
-from app.schemas import LoginSchema, RegisterSchema, UserSchema
+from app.schemas import AccountUpdateSchema, ChangePasswordSchema, LoginSchema, RegisterSchema, UserSchema
 
 
 def _auth_limit() -> str:
@@ -61,3 +61,36 @@ def refresh():
 @jwt_required()
 def me():
     return UserSchema().dump(current_user)
+
+
+@api.patch("/auth/me")
+@jwt_required()
+def update_me():
+    data = parse_body(AccountUpdateSchema())
+    if "email" in data:
+        email = data["email"].lower()
+        existing = _find_by_email(email)
+        if existing is not None and existing.id != current_user.id:
+            raise Conflict("An account with this email already exists.")
+        current_user.email = email
+    if "username" in data:
+        current_user.username = data["username"]
+    db.session.commit()
+    return UserSchema().dump(current_user)
+
+
+@api.post("/auth/change-password")
+@limiter.limit(_auth_limit)
+@jwt_required()
+def change_password():
+    data = parse_body(ChangePasswordSchema())
+    if not current_user.check_password(data["current_password"]):
+        raise APIError(
+            "Current password is incorrect.",
+            422,
+            "validation_error",
+            {"current_password": ["Current password is incorrect."]},
+        )
+    current_user.set_password(data["new_password"])
+    db.session.commit()
+    return "", 204

@@ -10,11 +10,18 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useAuth } from '@/context/AuthContext';
 import { colors, spacing } from '@/theme';
+import { confirmAction } from '@/utils/confirm';
 
 export function DrawerContent(props: DrawerContentComponentProps) {
   const { user, signOut } = useAuth();
   const insets = useSafeAreaInsets();
   const initial = user?.username.charAt(0).toUpperCase() ?? '?';
+
+  const logout = async () => {
+    if (await confirmAction('Log out', 'Are you sure you want to log out?', 'Log out')) {
+      await signOut();
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -30,11 +37,11 @@ export function DrawerContent(props: DrawerContentComponentProps) {
       </DrawerContentScrollView>
       <Pressable
         accessibilityRole="button"
-        onPress={() => void signOut()}
+        onPress={() => void logout()}
         style={[styles.signOut, { paddingBottom: spacing.lg + insets.bottom }]}
       >
         <Ionicons name="exit-outline" size={22} color={colors.text} />
-        <Text style={styles.signOutText}>Sign out</Text>
+        <Text style={styles.signOutText}>Log out</Text>
       </Pressable>
     </View>
   );
