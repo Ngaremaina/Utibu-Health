@@ -58,6 +58,17 @@ it('signs in, persists tokens and signs out', async () => {
   expect(await tokenStorage.load()).toBeNull();
 });
 
+it('updates and persists the signed-in user', async () => {
+  await tokenStorage.save({ accessToken: 'a', refreshToken: 'r', user });
+  const { result } = await renderAuth();
+
+  await act(() => result.current.updateUser({ ...user, username: 'janed' }));
+
+  expect(result.current.user?.username).toBe('janed');
+  expect((await tokenStorage.load())?.user.username).toBe('janed');
+  expect((await tokenStorage.load())?.accessToken).toBe('a');
+});
+
 it('signs up', async () => {
   jest.mocked(api.auth.register).mockResolvedValue(authResponse);
   const { result } = await renderAuth();
