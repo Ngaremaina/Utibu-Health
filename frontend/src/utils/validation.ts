@@ -34,3 +34,23 @@ export function validateRegistration(
 export function hasErrors(errors: object): boolean {
   return Object.values(errors).some(Boolean);
 }
+
+export function validateAccount(username: string, email: string): Errors<'username' | 'email'> {
+  const errors: Errors<'username' | 'email'> = {};
+  if (username.trim().length < 2) errors.username = 'Username must be at least 2 characters.';
+  if (!isEmail(email)) errors.email = 'Enter a valid email address.';
+  return errors;
+}
+
+export function validatePasswordChange(
+  current: string,
+  next: string,
+  confirm: string,
+): Errors<'current' | 'next' | 'confirm'> {
+  const errors: Errors<'current' | 'next' | 'confirm'> = {};
+  if (!current) errors.current = 'Current password is required.';
+  if (next.length < 8) errors.next = 'Password must be at least 8 characters.';
+  else if (next === current) errors.next = 'Choose a different password.';
+  if (confirm !== next) errors.confirm = 'Passwords do not match.';
+  return errors;
+}
