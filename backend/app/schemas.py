@@ -31,6 +31,16 @@ class LoginSchema(BaseSchema):
     password = fields.String(required=True, load_only=True)
 
 
+class AccountUpdateSchema(BaseSchema):
+    email = fields.Email(validate=validate.Length(max=255))
+    username = fields.String(validate=validate.Length(min=2, max=80))
+
+
+class ChangePasswordSchema(BaseSchema):
+    current_password = fields.String(required=True, load_only=True)
+    new_password = fields.String(required=True, load_only=True, validate=validate.Length(min=8, max=128))
+
+
 class UserSchema(Schema):
     id = fields.Integer()
     email = fields.Email()

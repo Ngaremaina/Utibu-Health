@@ -12,6 +12,8 @@ interface AuthContextValue {
   signIn: (email: string, password: string) => Promise<void>;
   signUp: (username: string, email: string, password: string) => Promise<void>;
   signOut: () => Promise<void>;
+  /** Replace the signed-in user (e.g. after editing the account) and persist it. */
+  updateUser: (user: User) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
@@ -71,9 +73,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setStatus('signedOut');
   }, []);
 
+  const updateUser = useCallback(async (next: User) => {
+    const session = tokenStorage.session;
+    if (session) await tokenStorage.save({ ...session, user: next });
+    setUser(next);
+  }, []);
+
   const value = useMemo(
-    () => ({ status, user, signIn, signUp, signOut }),
-    [status, user, signIn, signUp, signOut],
+    () => ({ status, user, signIn, signUp, signOut, updateUser }),
+    [status, user, signIn, signUp, signOut, updateUser],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

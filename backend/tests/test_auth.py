@@ -111,3 +111,61 @@ def test_login_is_rate_limited():
         ]
         db.drop_all()
     assert codes == [401, 401, 401, 429]
+
+
+def test_update_account(client, user, auth_headers):
+    res = client.patch(
+        "/api/v1/auth/me", json={"username": "renamed", "email": "Renamed@Example.com"}, headers=auth_headers
+    )
+    assert res.status_code == 200
+    assert res.get_json()["username"] == "renamed"
+    assert res.get_json()["email"] == "renamed@example.com"
+    login = client.post("/api/v1/auth/login", json={"email": "renamed@example.com", "password": "password123"})
+    assert login.status_code == 200
+
+
+def test_update_account_keeps_own_email_and_rejects_taken_email(client, user, make_user, auth_headers):
+    other = make_user()
+    same = client.patch("/api/v1/auth/me", json={"email": user.email.upper()}, headers=auth_headers)
+    assert same.status_code == 200
+    taken = client.patch("/api/v1/auth/me", json={"email": other.email}, headers=auth_headers)
+    assert taken.status_code == 409
+
+
+def test_update_account_validates_input(client, auth_headers):
+    res = client.patch("/api/v1/auth/me", json={"email": "nope", "username": "x"}, headers=auth_headers)
+    assert res.status_code == 422
+    assert {"email", "username"} <= res.get_json()["error"]["details"].keys()
+
+
+def test_change_password(client, user, auth_headers):
+    res = client.post(
+        "/api/v1/auth/change-password",
+        json={"current_password": "password123", "new_password": "new-password-456"},
+        headers=auth_headers,
+    )
+    assert res.status_code == 204
+    old = client.post("/api/v1/auth/login", json={"email": user.email, "password": "password123"})
+    new = client.post("/api/v1/auth/login", json={"email": user.email, "password": "new-password-456"})
+    assert old.status_code == 401
+    assert new.status_code == 200
+
+
+def test_change_password_rejects_wrong_current_password(client, auth_headers):
+    res = client.post(
+        "/api/v1/auth/change-password",
+        json={"current_password": "wrong-password", "new_password": "new-password-456"},
+        headers=auth_headers,
+    )
+    assert res.status_code == 422
+    assert "current_password" in res.get_json()["error"]["details"]
+
+
+def test_seed_is_idempotent(app, db):
+    from app.cli import SEED_PRODUCTS
+    from app.models import Product
+
+    runner = app.test_cli_runner()
+    assert f"Seeded {len(SEED_PRODUCTS)} product(s)." in runner.invoke(args=["seed"]).output
+    assert "Seeded 0 product(s)." in runner.invoke(args=["seed"]).output
+    assert db.session.query(Product).count() == len(SEED_PRODUCTS)
