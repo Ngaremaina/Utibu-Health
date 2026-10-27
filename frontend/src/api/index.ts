@@ -12,6 +12,7 @@ import type {
   Profile,
   ProfileResponse,
   ShippingAddress,
+  User,
 } from './types';
 
 export function createApi(client: AxiosInstance) {
@@ -28,6 +29,13 @@ export function createApi(client: AxiosInstance) {
         post<AuthResponse>('/auth/login', { email, password }),
       register: (username: string, email: string, password: string) =>
         post<AuthResponse>('/auth/register', { username, email, password }),
+      updateAccount: (changes: { username?: string; email?: string }) =>
+        patch<User>('/auth/me', changes),
+      changePassword: (currentPassword: string, newPassword: string) =>
+        post<void>('/auth/change-password', {
+          current_password: currentPassword,
+          new_password: newPassword,
+        }),
     },
     products: {
       list: (params: { q?: string; page?: number; per_page?: number } = {}) =>
