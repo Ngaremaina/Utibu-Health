@@ -7,7 +7,7 @@ Flask-JWT-Extended==4.7.4
 Flask-Limiter==4.1.1
 Flask-Migrate==4.1.0
 Flask-SQLAlchemy==3.1.1
-gunicorn==26.2.0
+gunicorn==27.0.1
 marshmallow==4.3.1
 psycopg[binary]==3.3.6
 PyJWT==2.15.1
